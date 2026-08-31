@@ -12,7 +12,8 @@ void setup() {
 void draw() {
   background(240);
 
-  fill(255, 120, 0);
+  fill(255-0.4*x, 0+0.4*x, 0);
+
   circle(x, y, radius*2);
   if (x-radius + xSpeed <= 0 || x + radius + xSpeed >= width) xSpeed *= -1;
   x += xSpeed;
@@ -26,4 +27,5 @@ void keyPressed() {
 
 void keyReleased() {
   ySpeed = 0;
+
 }
